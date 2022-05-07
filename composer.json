@@ -1,0 +1,20 @@
+{
+  "name": "pluonggr/328/communityKitchen",
+  "authors": [
+    {
+      "name": "Patrick Luong",
+      "email": "luong.patrick@student.greenriver.edu"
+    },
+    {
+      "name": "Chisom Ehirim",
+      "email": "Ehirim.Chisom@student.greenriver.edu"
+    },
+    {
+      "name": "Fauzia Ameeri",
+      "email": "ameeri.fauzia@student.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
