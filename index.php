@@ -16,8 +16,10 @@ $f3->route('GET /', function() {
 
 
     $view = new Template();
-    echo $view->render('views/home.html');
+    echo $view->render('views/home2.html');
 });
+
+
 
 //Run fat free
 // -> is invoking the run() method in the fat-free
