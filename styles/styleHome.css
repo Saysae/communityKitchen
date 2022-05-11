@@ -1,0 +1,49 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Awesome', sans-serif;
+    color: #f2f2f2;
+}
+
+.navbar{
+    padding: .8rem;
+}
+
+.carousel-inner img{
+    width: 100%;
+}
+
+.navbar-brand img{
+    height: 6rem;
+
+}
+
+.navbar-custom{
+    background-color: orange;
+}
+
+.navbar-nav li{
+    padding-right: 1.1rem;
+}
+
+.nav-link{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.nav-link:hover{
+  color: #f2f2f2;
+    font-weight: bold;
+}
+
+.carousel-caption{
+    position: absolute;
+    transform: translateY(-50%);
+    top:47%;
+}
+
+.display-5{
+    font-size: xx-large;
+    color: #f06f3a;
+    font-family: cursive;
+}
