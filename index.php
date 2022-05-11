@@ -3,6 +3,7 @@
 //Turn on error reporting
 ini_set('display_error', 1);
 error_reporting(E_ALL);
+session_start();
 //Require the autoload file
 require_once('vendor/autoload.php');
 
@@ -16,10 +17,24 @@ $f3->route('GET /', function() {
 
 
     $view = new Template();
-    echo $view->render('views/home2.html');
+    echo $view->render('views/home.html');
 });
 
+//Menu route
+$f3->route('GET /menu', function() {
 
+
+    $view = new Template();
+    echo $view->render('views/menu.html');
+});
+
+//Test route
+$f3->route('GET /menu2', function() {
+
+
+    $view = new Template();
+    echo $view->render('views/menu2.html');
+});
 
 //Run fat free
 // -> is invoking the run() method in the fat-free
