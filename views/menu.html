@@ -7,28 +7,36 @@
 <form action="summary" method="POST">
     <div class="container menuStyle">
         <h1 class="text-center">MENU</h1>
+<<<<<<< HEAD
+        <hr/>
+=======
+>>>>>>> f8031617ec50adef10448b7a113352f1ceca609c
 
         <div class="row">
             <repeat group=" {{ @menu }} "
                     key=" {{ @country }}"
                     value=" {{ @info }}">
-                <div class="col-sm-3">
+                <div class="col-md-3 $grid-gutter-width">
+                    <Label class="text-center">{{ @country }}</Label>
                     <repeat group=" {{ @info }}"
                             key=" {{ @food }}"
                             value="{{ @disc }}">
-                        <div class="card pb-2 px-3 py-2 m-3" style="width: 18rem">
-                            <Label class="text-wrap text-center">{{ @country }}</Label>
+                        <div class="card-group pb-5">
+                        <div class="card">
                             <h5 class="card-title">{{ @food }}</h5>
-                            <img src="{{ @disc[2] }}" class=" card-img-top">
+                            <img src="{{ @disc[2] }}" class="card-img-top">
                                 <div class="card-body">
                                     <p class="card-text">{{ @disc[0] }}</p>
                                     <p class="float-right">${{ @disc[1] }}</p>
                                 </div>
                         </div>
+                </div>
                     </repeat>
                 </div>
             </repeat>
         </div>
+
+
 
     </div>
 </form>
