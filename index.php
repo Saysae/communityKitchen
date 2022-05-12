@@ -30,12 +30,7 @@ $f3->route('GET /menu', function($f3) {
     echo $view->render('views/menu.html');
 });
 
-$f3->route('GET /test', function() {
 
-
-    $view = new Template();
-    echo $view->render('views/testMenu.html');
-});
 
 
 //Run fat free
