@@ -51,19 +51,15 @@ html, body{
 /*
 Menu styles
  */
-.menuStyle label:first-child{
+.menuStyle label {
     font-weight: bolder;
     color: #f06f3a;;
 }
 
-.menuStyle label{
-    font-weight: bold;
-    color: black;
-}
 
 .menuStyle p{
     font-weight: bold;
-    color: orange;
+    color: black;
 }
 
 .menuStyle h1{
@@ -71,11 +67,17 @@ Menu styles
     color: orange;
 }
 
-.menuStyle img{
-    width: 200px;
-    display: block;
-    height: 200px;
+
+.menuStyle h5{
+    color:orange;
+    text-align: center;
 }
+
+.menuStyle img{
+    width: 252px;
+    height: 180px;
+}
+
 
 .potluck img{
     width: 100%;
