@@ -71,6 +71,12 @@ Menu styles
     color: orange;
 }
 
+.menuStyle img{
+    width: 200px;
+    display: block;
+    height: 200px;
+}
+
 .potluck img{
     width: 100%;
     height: 25%;

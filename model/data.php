@@ -6,8 +6,8 @@ function getMenu(){
     return array (
         //Afgani menu
         'Afghani Food' => array(
-            'Lamb Kabab' =>  array('Marinated with garlic, black pepper', 21.99),
-            'Manto Dumpling' => array('Beef with onion', 24.99),
+            'Lamb Kabab' =>  array('Marinated with garlic, black pepper', 21.99, 'menuImages/lambKebab.png'),
+            'Manto Dumpling' => array('Beef with onion', 24.99, 'images/asian2.png'),
             'Qabili Palow' => array('Rice, Risen and Carrot', 29.99)),
 
         //Nigerian menu
