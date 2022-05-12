@@ -13,14 +13,18 @@
                     key=" {{ @country }}"
                     value=" {{ @info }}">
                 <div class="col-sm-3">
-
-                    <Label class="text-wrap text-center">{{ @country }}</Label>
                     <repeat group=" {{ @info }}"
                             key=" {{ @food }}"
                             value="{{ @disc }}">
-                        <label>{{ @food }} - {{ @disc[0] }}</label>
-                        <img src="{{ @disc[2] }}" class=" img-thumbnail">
-                        <p class="float-right">${{ @disc[1] }}</p>
+                        <div class="card pb-2 px-3 py-2 m-3" style="width: 18rem">
+                            <Label class="text-wrap text-center">{{ @country }}</Label>
+                            <h5 class="card-title">{{ @food }}</h5>
+                            <img src="{{ @disc[2] }}" class=" card-img-top">
+                                <div class="card-body">
+                                    <p class="card-text">{{ @disc[0] }}</p>
+                                    <p class="float-right">${{ @disc[1] }}</p>
+                                </div>
+                        </div>
                     </repeat>
                 </div>
             </repeat>

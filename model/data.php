@@ -25,7 +25,7 @@ function getMenu(){
         //Iraqi Food
         'Iraqi Food' => array(
             'Dolma' =>  array('Stuffed with vegetables', 10.99),
-            'Falafel' => array('Made with vegetables', 5.99),
+            'Falafel' => array('Made with vegetablpes', 5.99),
             'Kebab' => array('Different marinated meat', 15.99)),
 
         );
