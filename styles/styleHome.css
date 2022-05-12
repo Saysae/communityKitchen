@@ -47,3 +47,32 @@ html, body{
     color: #f06f3a;
     font-family: cursive;
 }
+
+/*
+Menu styles
+ */
+.menuStyle label:first-child{
+    font-weight: bolder;
+    color: #f06f3a;;
+}
+
+.menuStyle label{
+    font-weight: bold;
+    color: black;
+}
+
+.menuStyle p{
+    font-weight: bold;
+    color: orange;
+}
+
+.menuStyle h1{
+    font-weight: bolder;
+    color: orange;
+}
+
+.potluck img{
+    width: 100%;
+    height: 25%;
+}
+
