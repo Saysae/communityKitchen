@@ -12,13 +12,15 @@
             <repeat group=" {{ @menu }} "
                     key=" {{ @country }}"
                     value=" {{ @info }}">
-                <div class="col">
-                    <Label>{{ @country }}</Label>
+                <div class="col-sm-3">
+
+                    <Label class="text-wrap text-center">{{ @country }}</Label>
                     <repeat group=" {{ @info }}"
                             key=" {{ @food }}"
                             value="{{ @disc }}">
                         <label>{{ @food }} - {{ @disc[0] }}</label>
-                        <p>${{ @disc[1] }}</p>
+                        <img src="{{ @disc[2] }}" class=" img-thumbnail">
+                        <p class="float-right">${{ @disc[1] }}</p>
                     </repeat>
                 </div>
             </repeat>
