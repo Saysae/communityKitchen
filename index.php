@@ -22,14 +22,6 @@ $f3->route('GET /', function() {
 });
 
 
-
-$f3->route('GET /home', function() {
-
-
-    $view = new Template();
-    echo $view->render('views/home.html');
-});
-
 $f3->route('GET /menu', function($f3) {
 
     $f3->set('menu', getMenu());
