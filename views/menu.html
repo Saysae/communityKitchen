@@ -6,26 +6,26 @@
 <hr/>
 <form action="summary" method="POST">
     <div class="container menuStyle">
-        <h1 class="text-center">MENU</h1>
+        <h1 class="text-center pt-4 mb-4">MENU</h1>
         <div class="row">
             <repeat group=" {{ @menu }} "
                     key=" {{ @country }}"
                     value=" {{ @info }}">
-                <div class="col-md-3 $grid-gutter-width">
-                    <Label class="text-center">{{ @country }}</Label>
+                <div class="col-lg-4 col-md-6 col-xl-3 col-sm-12 border border-1 shadow-sm">
+                    <Label class="text-center display-4 pt-3 mb-5">{{ @country }}</Label>
                     <repeat group=" {{ @info }}"
                             key=" {{ @food }}"
                             value="{{ @disc }}">
-                        <div class="card-group pb-5">
-                        <div class="card">
-                            <h5 class="card-title">{{ @food }}</h5>
-                            <img src="{{ @disc[2] }}" class="card-img-top">
+                        <div class="card-group pb-2">
+                                <h5 class="card-title">{{ @food }}</h5>
+                                <img src="{{ @disc[2] }}" class="card-img-top">
                                 <div class="card-body">
-                                    <p class="card-text">{{ @disc[0] }}</p>
+                                    <p class="text-center">{{ @disc[0] }}</p>
                                     <p class="float-right">${{ @disc[1] }}</p>
+                                    <a href="#"><button class="btn btn-success btn-sm">Add to Cart</button></a>
                                 </div>
-                        </div>
-                </div>
+                            </div>
+
                     </repeat>
                 </div>
             </repeat>
@@ -36,4 +36,12 @@
     </div>
 </form>
 
+<include href="views/footer.html"></include>
+
+
+<div class="container-fluid mt-5">
+ <div class="row jumbotron">
+
+ </div>
+</div>
 <include href="views/footer.html"></include>

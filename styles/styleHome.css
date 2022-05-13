@@ -1,3 +1,14 @@
+/**
+Name: Chisom Ehirim , Patrick Luong, Fauzia Ameeri
+File styleHome.css -styles
+Date 5/11/2022
+Title Community Kitchen Project
+ */
+
+
+/**
+html and body style
+ */
 html, body{
     height: 100%;
     width: 100%;
@@ -5,14 +16,14 @@ html, body{
     color: #f2f2f2;
 }
 
+
+/**
+navbar style
+ */
 .navbar{
     padding: .8rem;
 }
 
-.carousel-inner img, #potluck{
-    width: 100%;
-    height: 450px;
-}
 
 .navbar-brand img{
     height: 6rem;
@@ -33,8 +44,17 @@ html, body{
 }
 
 .nav-link:hover{
-  color: #f2f2f2;
+    color: #f2f2f2;
     font-weight: bold;
+}
+
+
+/**
+carousel and menu image style
+ */
+.carousel-inner img, #potluck{
+    width: 100%;
+    height: 450px;
 }
 
 .carousel-caption{
@@ -43,11 +63,22 @@ html, body{
     top:35%;
 }
 
- .btn-custom, .btn-custom:hover{
+
+/*
+button styles
+ */
+ .btn-custom, a.btn-custom:hover{
     background-color: #f06f3a;
-    color: #f2f2f2;
      width: 100px;
      margin-bottom: 2em;
+}
+
+
+/*
+text display styles
+ */
+ .display-4{
+     font-size: x-large;
 }
 
 .display-5{
@@ -55,6 +86,8 @@ html, body{
     color: #f06f3a;
     font-family: cursive;
 }
+
+
 
 /*
 Menu styles
@@ -75,6 +108,9 @@ Menu styles
     color: orange;
 }
 
+.container .menuStyle{
+    width: 100%;
+}
 
 .menuStyle h5{
     color:orange;
@@ -82,17 +118,26 @@ Menu styles
 }
 
 .menuStyle img{
-    width: 252px;
-    height: 180px;
+    width: 253px;
+    max-height: 180px;
 }
 
-<<<<<<< HEAD
+.menuStyle .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .potluck img{
-=======
-/*.potluck img{
->>>>>>> f8031617ec50adef10448b7a113352f1ceca609c
+
     width: 100%;
     height: 25%;
 }
-*/
+
