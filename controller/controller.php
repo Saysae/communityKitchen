@@ -29,7 +29,8 @@ class Controller
     }
 
     function contact(){
-
+        $view = new Template();
+        echo $view->render('views/contact.html');
     }
 
 }
