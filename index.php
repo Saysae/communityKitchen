@@ -24,7 +24,12 @@ $f3->route('GET /', function() {
 
 $f3->route('GET /menu', function($f3) {
 
-    $f3->set('menu', getMenu());
+    $f3->set('afganiMenu', Data::getMenuAfgani());
+    $f3->set('chineseMenu', Data::getMenuChinese());
+    $f3->set('iraqiMenu', Data::getMenuIraqi());
+    $f3->set('nigerianMenu', Data::getMenuNigerian());
+
+
 
 
     $view = new Template();

@@ -123,9 +123,7 @@ Menu styles
     color: orange;
 }
 
-.container .menuStyle {
-    width: 100%;
-}
+
 
 .menuStyle h5 {
     color: orange;
@@ -137,13 +135,7 @@ Menu styles
     max-height: 179px;
 }
 
-.menuStyle .row {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 .row > [class*='col-'] {
     display: flex;
