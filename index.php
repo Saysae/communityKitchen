@@ -37,6 +37,13 @@ $f3->route('GET|POST /summary', function($f3) {
     echo $view->render('views/summary.html');
 });
 
+$f3->route('GET /contact', function($f3) {
+
+
+    $view = new Template();
+    echo $view->render('views/contact.html');
+});
+
 
 //Run fat free
 // -> is invoking the run() method in the fat-free
