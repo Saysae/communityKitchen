@@ -8,7 +8,7 @@ class Data
             'Afghani Food' => array(
             'Lamb Kabab' =>  array('Marinated deliciousness', 21.99, 'menuImages/lambKebab.png'),
             'Manto Dumpling' => array('Beef with onion', 24.99, 'menuImages/dumpling.png'),
-            'Qabili Palow' => array('Rice, Risen and Carrot', 29.99,'menuImages/palow.png'))
+            'Qabili Palow' => array('Rice, Risen and Carrot and marinated pork', 29.99,'menuImages/palow.png'))
         );
     }
     static function getMenuNigerian(){

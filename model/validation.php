@@ -2,6 +2,8 @@
 
 class Validation
 {
+
+
     function validateMenu($menu){
         $validFood = Data::getMenuAfgani();
 
