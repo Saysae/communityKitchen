@@ -29,4 +29,6 @@ function getMenu(){
             'Kebab' => array('Different marinated meat', 15.99,'menuImages/beefKebab.png')),
 
         );
+
+
 }

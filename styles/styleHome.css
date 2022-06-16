@@ -141,3 +141,7 @@ Menu styles
     height: 25%;
 }
 
+.fa-star, .fa-star-half{
+    color: yellowgreen;
+    padding: 3% 0;
+}
