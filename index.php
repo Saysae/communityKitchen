@@ -3,10 +3,14 @@
 //Turn on error reporting
 ini_set('display_error', 1);
 error_reporting(E_ALL);
-session_start();
+
 //Require the autoload file
 require_once('vendor/autoload.php');
-require_once('model/data.php');
+session_start();
+
+$f3 = Base::instance();
+$controller = new Controller($f3);
+
 
 //Create an instance of the Base class
 //:: is used to call a method within the static Base class within fat-free
@@ -16,37 +20,23 @@ $f3 = Base::instance();
 //
 $f3->route('GET /', function() {
 
-
-    $view = new Template();
-    echo $view->render('views/home.html');
+    $GLOBALS['controller']->home();
 });
 
 
-$f3->route('GET /menu', function($f3) {
+$f3->route('GET /menu', function() {
 
-    $f3->set('afganiMenu', Data::getMenuAfgani());
-    $f3->set('chineseMenu', Data::getMenuChinese());
-    $f3->set('iraqiMenu', Data::getMenuIraqi());
-    $f3->set('nigerianMenu', Data::getMenuNigerian());
-
-
-
-
-    $view = new Template();
-    echo $view->render('views/menu.html');
+    $GLOBALS['controller']->menu();
 });
 
 $f3->route('GET|POST /summary', function($f3) {
 
-    $view = new Template();
-    echo $view->render('views/summary.html');
+    $GLOBALS['controller']->summary();
 });
 
 $f3->route('GET /contact', function($f3) {
 
-
-    $view = new Template();
-    echo $view->render('views/contact.html');
+    $GLOBALS['controller']->contact();
 });
 
 
