@@ -145,3 +145,15 @@ Menu styles
     color: yellowgreen;
     padding: 3% 0;
 }
+
+.fa-minus, .fa-plus{
+    font-size: 12px;
+    padding-top: 9px;
+}
+
+.fa-plus{
+    color: green;
+}
+.fa-minus{
+    color: red;
+}
