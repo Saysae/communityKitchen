@@ -147,10 +147,7 @@ Menu styles
 
 .footerClass{
     background-color: #212121;
-    position:fixed;
-    left:0px;
-    bottom:0px;
-    clear: both;
+
 }
 
 /*Admin */

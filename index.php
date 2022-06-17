@@ -34,7 +34,7 @@ $f3->route('GET /contact', function() {
     $GLOBALS['controller']->contact();
 });
 
-$f3->route('GET /form', function() {
+$f3->route('GET|POST /form', function() {
 
     $GLOBALS['controller']->form();
 });

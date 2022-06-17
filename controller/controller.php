@@ -51,7 +51,7 @@ class Controller
             $country="";
             $food="";
             $description="";
-            $price = "";
+            $price;
             if (isset($_POST['fname'])) {
                 $fname = $_POST['fname'];
             };
@@ -64,18 +64,17 @@ class Controller
             if (isset($_POST['food'])) {
                 $food = $_POST['food'];
             };
-            if (isset($_POST['decription'])) {
-                $description = $_POST['decription'];
+            if (isset($_POST['description'])) {
+                $description = $_POST['description'];
             };
             if (isset($_POST['price'])) {
                 $price = $_POST['price'];
             };
 
             $chef = new Chef($fname, $lname);
+            $_SESSION['chef'] = $chef;
             if(Validation::validFName($fname)){
-                $_SESSION['chef'] = $chef;
                 $_SESSION['chef']->setFname($fname);
-
             }else{
                 $this->_f3->set('errors["fname"]', 'Only letters are allowed for first names!');
             }
@@ -87,7 +86,7 @@ class Controller
             if(Validation::validCountry($country)){
                 $_SESSION['chef']->setCountry($country);
             }else{
-                $this->_f3->set('errors["coutnry"]', 'Please enter a Country name');
+                $this->_f3->set('errors["country"]', 'Please enter a Country name');
             }
             if(Validation::validFood($food)){
                 $_SESSION['chef']->setFood($food);
@@ -102,7 +101,7 @@ class Controller
             if(Validation::validPrice($price)){
                 $_SESSION['chef']->setPrice($price);
             }else{
-                $this->_f3->set('errors["description"]', 'Please enter a short description of your dish');
+                $this->_f3->set('errors["price"]', 'Please enter a price including cents EX. 10.00');
             }
 
             if(empty($this->_f3->get('errors'))){
