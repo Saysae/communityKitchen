@@ -116,4 +116,17 @@ class Controller
         $view = new Template();
         echo $view->render('views/thankYou.html');
     }
+
+    function table()
+    {
+        //Get the orders from the DB and save them to the F3 hive
+        $dish = $GLOBALS['data']->viewSuggestions();
+
+        $this->_f3->set('dish', $dish);
+
+        $view = new Template();
+        echo $view->render('views/table.html');
+    }
+
+
 }

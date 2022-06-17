@@ -1,0 +1,23 @@
+<include href="views/header.html"></include>
+
+<div class="container table">
+    <h1>Suggested Foods</h1>
+    <p>Please take a look at our suggested foods we might serve in near future!</p>
+    <table>
+        <tr>
+            <th>Food</th>
+            <th>Country</th>
+            <th>Description</th>
+        </tr>
+        <repeat group="{{ @dish }}" value="{{ @dish }}">
+            <tr>
+                <td> {{ @dish['food'] }}</td>
+                <td> {{ @dish['country'] }}</td>
+                <td> {{ @dish['description'] }}</td>
+            </tr>
+        </repeat>
+    </table>
+    <a href="{{ @BASE }}">Return to Home</a>
+</div>
+
+<include href="views/footer.html"></include>

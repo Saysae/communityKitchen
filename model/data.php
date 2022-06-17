@@ -2,6 +2,66 @@
 
 class Data
 {
+    private $_dbh;
+
+    /** DataLayer constructor
+     *
+     */
+    function __construct()
+    {
+        //TODO: Move try-catch from config.php to here
+        require_once $_SERVER['DOCUMENT_ROOT'].'/../config.php';
+        $this->_dbh = $dbh;
+        $this->_dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $this->_dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    }
+
+    function saveSuggestions($dish)
+    {
+
+        //1. Define the query
+        $sql = "INSERT INTO dish (country, food, description, ) 
+                VALUES (:country, :food, :description)";
+
+        //2. Prepare the statement
+        $statement = $this->_dbh->prepare($sql);
+
+        //3. Bind the parameters
+        $country = $dish->getCountry();
+        $food = $dish->getFood();
+        $description = $dish->getDescription();
+
+        $statement->bindParam(':food', $food, PDO::PARAM_STR);
+        $statement->bindParam(':country', $country, PDO::PARAM_STR);
+        $statement->bindParam(':description', $description, PDO::PARAM_STR);
+
+        //4. Execute the prepared statement
+        $statement->execute();
+
+        //5. Process the result
+        $id = $this->_dbh->lastInsertId();
+        //echo "Row inserted: $id";
+        return $id;
+    }
+
+    function viewSuggestions()
+    {
+        //1. Define the query
+        $sql = "SELECT * FROM dish";
+
+        //2. Prepare the statement
+        $statement = $this->_dbh->prepare($sql);
+
+        //3. Bind the parameters
+
+        //4. Execute the prepared statement
+        $statement->execute();
+
+        //5. Process the result
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+        //var_dump($result);
+    }
 
     static function getMenuAfgani(){
         return array (

@@ -171,6 +171,14 @@ Menu styles
 .thanks h1{
     color:orange;
 }
+
+.table h1{
+    color: orange;
+}
+
+.table p{
+    color:black;
+}
 /*
 .fas fa-shopping-cart {
     background-color: #f06f3a;
