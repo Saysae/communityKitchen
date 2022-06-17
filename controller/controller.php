@@ -74,7 +74,7 @@ class Controller
             $chef = new Chef($fname, $lname);
             if(Validation::validFName($fname)){
                 $_SESSION['chef'] = $chef;
-                $_SESSION['puppy']->setFname($fname);
+                $_SESSION['chef']->setFname($fname);
 
             }else{
                 $this->_f3->set('errors["fname"]', 'Only letters are allowed for first names!');
@@ -84,20 +84,29 @@ class Controller
             }else{
                 $this->_f3->set('errors["lname"]', 'Only letters are allowed for last names!');
             }
-            if(Validation::validAge($country)){
+            if(Validation::validCountry($country)){
                 $_SESSION['chef']->setCountry($country);
             }else{
-                $this->_f3->set('errors["coutnry"]', 'Please select an age between 18 and 118 :)');
+                $this->_f3->set('errors["coutnry"]', 'Please enter a Country name');
             }
-            if(Validation::validPhone($phone)){
-                $_SESSION['puppy']->setNumber($phone);
+            if(Validation::validFood($food)){
+                $_SESSION['chef']->setFood($food);
             }else{
-                $this->_f3->set('errors["phone"]', 'Please enter a 10 digit number
-            (including area code)');
+                $this->_f3->set('errors["food"]', 'Please enter the name of your dish');
+            }
+            if(Validation::validDescription($description)){
+                $_SESSION['chef']->setDescription($description);
+            }else{
+                $this->_f3->set('errors["description"]', 'Please enter a short description of your dish');
+            }
+            if(Validation::validPrice($price)){
+                $_SESSION['chef']->setPrice($price);
+            }else{
+                $this->_f3->set('errors["description"]', 'Please enter a short description of your dish');
             }
 
             if(empty($this->_f3->get('errors'))){
-                header('location: profile');
+                header('location: summary');
             }
         }
 
@@ -105,6 +114,6 @@ class Controller
         echo $view->render('views/adminForm.html');
     }
     function summary(){
-
+        var_dump($_SESSION['chef']);
     }
 }

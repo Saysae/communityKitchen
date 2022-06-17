@@ -29,17 +29,17 @@ $f3->route('GET /menu', function() {
     $GLOBALS['controller']->menu();
 });
 
-$f3->route('GET /contact', function($f3) {
+$f3->route('GET /contact', function() {
 
     $GLOBALS['controller']->contact();
 });
 
-$f3->route('GET /form', function($f3) {
+$f3->route('GET /form', function() {
 
     $GLOBALS['controller']->form();
 });
 
-$f3->route('GET|POST /summary', function($f3) {
+$f3->route('GET|POST /summary', function() {
 
     $GLOBALS['controller']->summary();
 });
