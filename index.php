@@ -44,6 +44,11 @@ $f3->route('GET|POST /summary', function($f3) {
 
     $GLOBALS['controller']->summary();
 });
+
+$f3->route('GET|POST /thanks', function($f3) {
+
+    $GLOBALS['controller']->thanks();
+});
 //Run fat free
 // -> is invoking the run() method in the fat-free
 $f3->run();

@@ -147,7 +147,7 @@ Menu styles
 
 .footerClass{
     background-color: #212121;
-
+    position: fixed;
 }
 
 /*Admin */
@@ -158,6 +158,19 @@ Menu styles
     color: orange;
 }
 
+.summary li{
+    color:black;
+}
+.summary h1{
+    color:orange;
+}
+.thanks p{
+    color:black;
+}
+
+.thanks h1{
+    color:orange;
+}
 /*
 .fas fa-shopping-cart {
     background-color: #f06f3a;

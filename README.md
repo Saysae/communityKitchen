@@ -15,13 +15,11 @@ Food extends Country Cuisine
 ________
 -nameOfFood
 
--price
 
 -description
 
 +getNameOfFood()
 
-+getPrice()
 
 +getDescription
 
@@ -29,8 +27,12 @@ ________
 
 +setDescription()
 
-+setPrice()
+
+We implemented the class using a suggestion form
+where people can suggest what foods they would like to see
+in our kitchen.
 
 
 
 All functions are routed through fat-fee using a controller. 
+ 

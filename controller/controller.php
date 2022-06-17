@@ -75,7 +75,7 @@ class Controller
             }else{
                 $this->_f3->set('errors["fname"]', 'Only letters are allowed for names!');
             }
-            if(Validation::validLName($email)){
+            if(Validation::validEmail($email)){
                 $_SESSION['email'] = $email;
             }else{
                 $this->_f3->set('errors["email"]', 'Please enter a valid email!');
@@ -95,11 +95,6 @@ class Controller
             }else{
                 $this->_f3->set('errors["description"]', 'Please enter a short description of your dish');
             }
-            if(Validation::validPrice($price)){
-                $_SESSION['dish']->setPrice($price);
-            }else{
-                $this->_f3->set('errors["price"]', 'Please enter a price including cents EX. 10.00');
-            }
 
             if(empty($this->_f3->get('errors'))){
                 header('location: summary');
@@ -115,5 +110,10 @@ class Controller
         var_dump($_SESSION['name']);
         $view = new Template();
         echo $view->render('views/summary.html');
+    }
+
+    function thanks(){
+        $view = new Template();
+        echo $view->render('views/thankYou.html');
     }
 }

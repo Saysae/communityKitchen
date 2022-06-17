@@ -1,0 +1,23 @@
+<include href="views/header.html"></include>
+<h1>Summary</h1>
+<hr class="hr">
+<hr class="my-4">
+<form method="POST" action="thanks">
+    <div class="container summary">
+        <div class="row no-gutters">
+            <div class="col">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item">Name: {{ @SESSION.name }}</li>
+                    <li class="list-group-item">email: {{ @SESSION.email }}</li>
+                    <li class="list-group-item">Country: {{ @SESSION.dish->getCountry() }}</li>
+                    <li class="list-group-item">Food: {{ @SESSION.dish->getFood() }}</li>
+                    <li class="list-group-item">Description: {{ @SESSION.dish->getDescription() }}</li>
+                </ul>
+            </div>
+        </div>
+        <button class="btn btn-primary">Suggest!</button>
+    </div>
+</form>
+</div>
+</body>
+</html>

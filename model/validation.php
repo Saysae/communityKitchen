@@ -19,20 +19,17 @@ class Validation
     static function validFname($fname){
         return ctype_alpha($fname) && strlen(trim($fname)) >= 2 ;
     }
-    static function validLname($lname){
-        return ctype_alpha($lname) && strlen(trim($lname)) >= 2;
+    static function validEmail($email){
+        return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
     static function validCountry($country){
-        return ctype_alpha($country);
+        return strlen(trim($country)) >= 2;
     }
     static function validFood($food){
-        return ctype_alpha($food);
+        return strlen(trim($food)) >= 2;
     }
     static function validDescription($description){
-        return ctype_alpha($description) && strlen(trim($description)) <= 250;
-    }
-    static function validPrice($price){
-        return is_float($price);
+        return strlen(trim($description)) >= 2;
     }
 
 }
