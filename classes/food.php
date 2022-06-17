@@ -1,17 +1,17 @@
 <?php
 
-class Dish extends CountryCuisine
+class Food extends CountryCuisine
 {
-    private $food;
-    private $price;
-    private $description;
+    private string $food;
+    private float $price;
+    private string $description;
 
     /**
      * @param $food
      * @param $price
      * @param $description
      */
-    public function __construct($food, $price, $description)
+    public function __construct($food = "", $price="", $description="")
     {
         $this->food = $food;
         $this->price = $price;
