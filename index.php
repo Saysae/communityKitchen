@@ -35,6 +35,15 @@ $f3->route('GET /contact', function($f3) {
     $GLOBALS['controller']->contact();
 });
 
+$f3->route('GET|POST /form', function($f3) {
+
+    $GLOBALS['controller']->form();
+});
+
+$f3->route('GET|POST /summary', function($f3) {
+
+    $GLOBALS['controller']->summary();
+});
 //Run fat free
 // -> is invoking the run() method in the fat-free
 $f3->run();

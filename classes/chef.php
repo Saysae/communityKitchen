@@ -9,10 +9,10 @@ class Chef
      * @param $fname
      * @param $lname
      */
-    public function __construct($fname, $lname)
+    public function __construct()
     {
-        $this->fname = $fname;
-        $this->lname = $lname;
+        $this->fname = "";
+        $this->lname = "";
     }
 
     /**

@@ -3,19 +3,15 @@
 class Dish extends CountryCuisine
 {
     private $food;
-    private $price;
     private $description;
 
-    /**
-     * @param $food
-     * @param $price
-     * @param $description
-     */
-    public function __construct($food, $price, $description)
+
+    public function __construct()
     {
-        $this->food = $food;
-        $this->price = $price;
-        $this->description = $description;
+        parent::__construct();
+
+        $this->food = "";
+        $this->description = "";
     }
 
     /**
@@ -37,18 +33,7 @@ class Dish extends CountryCuisine
     /**
      * @return mixed
      */
-    public function getPrice()
-    {
-        return $this->price;
-    }
 
-    /**
-     * @param mixed $price
-     */
-    public function setPrice($price): void
-    {
-        $this->price = $price;
-    }
 
     /**
      * @return mixed

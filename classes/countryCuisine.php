@@ -1,15 +1,16 @@
 <?php
 
-class CountryCuisine extends Chef
+class CountryCuisine
 {
     private $country;
 
     /**
      * @param $country
      */
-    public function __construct($country)
+    public function __construct()
     {
-        $this->country = $country;
+
+        $this->country ="";
     }
 
     /**
