@@ -147,8 +147,21 @@ Menu styles
 
 .footerClass{
     background-color: #212121;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    clear: both;
 }
 
+/*Admin */
+.form label{
+    color: black;
+}
+.form h1{
+    color: orange;
+}
+
+/*
 .fas fa-shopping-cart {
     background-color: #f06f3a;
     color: #212121;
@@ -169,6 +182,7 @@ Menu styles
     border-radius:3px !important;
 
 }
+*/
 
 
 

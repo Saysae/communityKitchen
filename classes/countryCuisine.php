@@ -1,6 +1,6 @@
 <?php
 
-class CountryCuisine
+class CountryCuisine extends Chef
 {
     private $country;
 
@@ -27,7 +27,5 @@ class CountryCuisine
     {
         $this->country = $country;
     }
-
-
 
 }

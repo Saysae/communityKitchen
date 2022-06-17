@@ -1,0 +1,67 @@
+<include href="views/header.html"></include>
+<hr class="hr">
+<hr class="my-4">
+<div class="container form">
+    <form method="POST" action="#">
+        <h1>Cuisine Information</h1>
+        <div class="row no-gutters">
+            <div class="col-12 col-sm-6 col-md-8">
+                <hr/>
+                <div class="form-group">
+                    <label for="fname"><strong>First Name</strong></label>
+                    <input type="text" name="fname" class="form-control" id="fname"
+                           value="{{ @fname }}">
+                    <check if="{{ isset(@errors['fname']) }}">
+                        <span class="text-danger">{{ @errors['fname'] }}</span>
+                    </check>
+                </div>
+                <div class="form-group">
+                    <label for="lname"><strong>Last Name</strong></label>
+                    <input type="text" name="lname" class="form-control" id="lname"
+                           value="{{ @lname }}">
+                    <check if="{{ isset(@errors['lname']) }}">
+                        <span class="text-danger">{{ @errors['lname'] }}</span>
+                    </check>
+                </div>
+                <div class="form-group">
+                    <label for="country"><strong>Country</strong></label>
+                    <input type="text" name="country" class="form-control" id="country"
+                           value="{{ @age }}">
+                    <check if="{{ isset(@errors['country']) }}">
+                        <span class="text-danger">{{ @errors['country'] }}</span>
+                    </check>
+                </div>
+                <div class="form-group">
+                    <label for="food"><strong>Food</strong></label>
+                    <input type="text" name="food" class="form-control" id="food"
+                           value="{{ @food }}">
+                    <check if="{{ isset(@errors['food']) }}">
+                        <span class="text-danger">{{ @errors['food'] }}</span>
+                    </check>
+                </div>
+                <div class="form-group">
+                        <label for="food"><strong>Price</strong></label>
+                        <input type="text" name="price" class="form-control" id="price"
+                               value="{{ @price }}">
+                        <check if="{{ isset(@errors['price']) }}">
+                            <span class="text-danger">{{ @errors['price'] }}</span>
+                        </check>
+                </div>
+                <div class="form-group">
+                        <label for="food"><strong>Price</strong></label>
+                        <input type="text" name="price" class="form-control" id="price"
+                               value="{{ @price }}">
+                        <check if="{{ isset(@errors['price']) }}">
+                            <span class="text-danger">{{ @errors['price'] }}</span>
+                        </check>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary">Next</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+

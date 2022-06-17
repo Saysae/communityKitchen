@@ -16,4 +16,9 @@ class Validation
         return true;
     }
 
+    function validFname($fname){
+
+    }
+
+
 }

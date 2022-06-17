@@ -29,17 +29,20 @@ $f3->route('GET /menu', function() {
     $GLOBALS['controller']->menu();
 });
 
-$f3->route('GET|POST /summary', function($f3) {
-
-    $GLOBALS['controller']->summary();
-});
-
 $f3->route('GET /contact', function($f3) {
 
     $GLOBALS['controller']->contact();
 });
 
+$f3->route('GET /form', function($f3) {
 
+    $GLOBALS['controller']->form();
+});
+
+$f3->route('GET|POST /summary', function($f3) {
+
+    $GLOBALS['controller']->summary();
+});
 //Run fat free
 // -> is invoking the run() method in the fat-free
 $f3->run();
